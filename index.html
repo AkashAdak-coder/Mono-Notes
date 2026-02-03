@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- LEFT SIDEBAR -->
+        <aside class="sidebar">
+            <h1>ZNotes</h1>
+
+            <input type="text" id="search-input" placeholder="Search notes..." />
+
+            <button class="btn" id="newNoteBtn">+ New Note</button>
+
+            <ul class="notes-list"></ul>
+        </aside>
+
+        <!-- RIGHT EDITOR -->
+        <main class="editor">
+            <input type="text" id="note-title" placeholder="Title..." />
+
+            <div class="toolbar">
+                <button data-cmd="bold"><b>B</b></button>
+                <button data-cmd="italic"><i>I</i></button>
+                <button data-cmd="underline"><u>U</u></button>
+            </div>
+
+            <div id="note-content" contenteditable="true" class="content">
+                Select or create a note…
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
