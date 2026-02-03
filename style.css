@@ -1,0 +1,115 @@
+:root {
+  --bg-main: #0f1115;
+  --bg-card: #1a1d23;
+  --bg-muted: #23262d;
+  --accent: #facc15;
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+  --border: #2f3340;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+body {
+  background: var(--bg-main);
+  color: var(--text-main);
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  background: var(--bg-card);
+  border-right: 1px solid var(--border);
+  padding: 20px;
+}
+
+.sidebar h1 {
+  margin-bottom: 20px;
+}
+
+#search-input {
+  width: 100%;
+  padding: 10px;
+  background: var(--bg-muted);
+  border: 1px solid var(--border);
+  color: var(--text-main);
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  background: var(--accent);
+  border: none;
+  color: black;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.notes-list {
+  list-style: none;
+}
+
+.notes-list li {
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--text-muted);
+}
+
+.notes-list li.active,
+.notes-list li:hover {
+  background: var(--bg-muted);
+  color: var(--text-main);
+}
+
+/* Editor */
+.editor {
+  padding: 30px;
+}
+
+#note-title {
+  width: 100%;
+  font-size: 28px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text-main);
+  margin-bottom: 10px;
+}
+
+.toolbar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.toolbar button {
+  background: var(--bg-muted);
+  border: 1px solid var(--border);
+  color: var(--text-main);
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.content {
+  min-height: 70vh;
+  background: var(--bg-card);
+  padding: 20px;
+  border-radius: 10px;
+  outline: none;
+}
