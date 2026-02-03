@@ -113,3 +113,17 @@ body {
   border-radius: 10px;
   outline: none;
 }
+
+.content .input-box{
+    height: 70vh;
+    width: 100%;
+    color: white;
+    padding: 12px 12px 0 12px;
+    background-color: transparent;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    outline: none;
+    border: none;
+    resize: none;
+
+}
