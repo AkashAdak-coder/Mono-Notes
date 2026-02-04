@@ -117,7 +117,7 @@ body {
 .content .input-box{
     height: 70vh;
     width: 100%;
-    color: white;
+    color: var(--text-main);
     padding: 12px 12px 0 12px;
     background-color: transparent;
     font-size: 1.2rem;
@@ -125,5 +125,4 @@ body {
     outline: none;
     border: none;
     resize: none;
-
 }
