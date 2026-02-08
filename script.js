@@ -33,5 +33,45 @@ function renderNotesList() {
     });
 }
 
+function saveCurrentNote() {
+    if (currentNoteId === null) return; 
+
+    const note = notes.find(n => n.id === currentNoteId);
+    if (!note) return;
+
+    note.title = noteTitleInput.value || 'Untitled';
+    note.content = contentBox.value;
+
+    renderNotesList();
+}
+
+function openNote(id) {
+    const note = notes.find(n => n.id == id);
+    if (!note) return;
+
+    currentNoteId = note.id;
+    noteTitleInput.value = note.title;
+    contentBox.value = note.content;
+
+    renderNotesList();
+}
+
+
 
 newNoteBtn.addEventListener('click', createNewNote);
+
+noteTitleInput.addEventListener('input', () => {
+    saveCurrentNote(); 
+});
+
+contentBox.addEventListener('input', () => {
+    saveCurrentNote(); 
+});
+
+notesList.addEventListener('click', (e) => {
+    if (e.target.tagName === 'LI') {
+        openNote(e.target.dataset.id);
+    }
+});
+
+createNewNote();
