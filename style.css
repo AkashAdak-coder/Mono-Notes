@@ -106,6 +106,18 @@ body {
   cursor: pointer;
 }
 
+.bold-text{
+  font-weight: bold;
+}
+
+.italic-text{
+  font-style: italic;
+}
+
+.underline-text{
+  text-decoration: underline;
+}
+
 .content {
   min-height: 70vh;
   background: var(--bg-card);
@@ -115,14 +127,13 @@ body {
 }
 
 .content .input-box{
-    height: 70vh;
-    width: 100%;
-    color: var(--text-main);
-    padding: 12px 12px 0 12px;
-    background-color: transparent;
-    font-size: 1.2rem;
-    line-height: 1.5;
-    outline: none;
-    border: none;
-    resize: none;
+  height: 70vh;
+  width: 100%;
+  color: var(--text-main);
+  padding: 12px;
+  background-color: transparent;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  border: none;
+  outline: none;
 }

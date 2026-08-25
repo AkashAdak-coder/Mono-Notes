@@ -24,13 +24,13 @@
             <input type="text" id="note-title" placeholder="Title..." />
 
             <div class="toolbar">
-                <button data-cmd="bold"><b>B</b></button>
-                <button data-cmd="italic"><i>I</i></button>
-                <button data-cmd="underline"><u>U</u></button>
+                <button class="toolbar-btn" onclick="formatText('bold')"><b>B</b></button>
+                <button class="toolbar-btn" onclick="formatText('italic')"><i>I</i></button>
+                <button class="toolbar-btn" onclick="formatText('underline')"><u>U</u></button>
             </div>
 
-            <div id="note-content" contenteditable="true" class="content">
-                <textarea placeholder="Select or create a note…" class="input-box"></textarea>
+            <div id="note-content" class="content">
+                <div class="input-box" contenteditable="true"></div>
             </div>
         </main>
     </div>
