@@ -68,6 +68,8 @@ body {
   border-radius: 6px;
   cursor: pointer;
   color: var(--text-muted);
+  display: flex;
+  justify-content: space-between;
 }
 
 .notes-list li.active,
@@ -128,7 +130,7 @@ body {
 
 .content .input-box{
   height: 70vh;
-  width: 100%;
+  width: 78vw;
   color: var(--text-main);
   padding: 12px;
   background-color: transparent;
@@ -136,4 +138,5 @@ body {
   line-height: 1.5;
   border: none;
   outline: none;
+  overflow: auto;
 }

@@ -2,7 +2,7 @@ const newNoteBtn = document.getElementById('newNoteBtn');
 const notesList = document.querySelector('.notes-list');
 const noteTitleInput = document.getElementById('note-title');
 const noteContentDiv = document.getElementById('note-content');
-const contentBox = document.querySelector('.content .input-box');
+const contentBox = document.querySelector('.input-box');
 const buttons = document.querySelectorAll('.toolbar-btn');
 
 let notes = []; 
@@ -17,7 +17,7 @@ function createNewNote() {
   notes.push(newNote);
   currentNoteId = newNote.id;
   noteTitleInput.value = '';
-  contentBox.value = '';
+  contentBox.innerHTML = '';
   contentBox.focus();
 
   renderNotesList();
@@ -62,9 +62,8 @@ function formatText(styleType) {
    if (!selection.rangeCount || selection.isCollapsed) return;
 
   const range = selection.getRangeAt(0);
-  const inputBox = document.querySelector(".input-box");
 
-  if (!inputBox.contains(range.commonAncestorContainer)) {
+  if (!contentBox.contains(range.commonAncestorContainer)) {
     console.log("Selection is outside the input box!");
     return;
   }
@@ -78,7 +77,7 @@ function formatText(styleType) {
     document.execCommand('underline', false, null);
   }
 
-  // saveCurrentNote();
+  saveCurrentNote();
 }
 
 
